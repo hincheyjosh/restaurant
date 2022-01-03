@@ -1,0 +1,56 @@
+@font-face {
+    font-family: "Spartan";
+    src: url("./Spartan-VariableFont_wght.ttf") format("truetype");
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    font-family: "Spartan";
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: black;
+    opacity: .8;
+    color: white;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    color: white;
+    background-color: black;
+    opacity: .7;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    gap: 30px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: url("./barPhoto.jpg") no-repeat center fixed;
+    background-size: cover;
+}
+
+.content {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+
+}
