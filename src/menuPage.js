@@ -1,8 +1,7 @@
 import Menu from "./menu.json"
 
 
-export default function printMenu() {
-    Menu.forEach(element => {
-        console.log(element)
-    });
+export default function createMenuContent() {
+    const content = document.querySelector(".content")
+    content.innerHTML = ""
 }

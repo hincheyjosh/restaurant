@@ -1,6 +1,6 @@
 import './style.css'
 import chefPhoto from "./chefPhoto.jpg"
-import printMenu from "./menuPage.js"
+import createMenuContent from "./menuPage.js"
 
 const navOptions = ["Home", "Menu", "Contact"]
 
@@ -28,6 +28,7 @@ function createFooter() {
 }
 
 function createHomeContent() {
+    content.innerHTML = ""
     const mainContainer = document.createElement("div")
     mainContainer.classList = "mainContainer"
 
@@ -49,7 +50,6 @@ function createHomeContent() {
                     <li>Fri 10am - 12pm</li>
                     <li>Sat 10am - 12pm</li>
                     <li>Sun 10am - 10pm</li>`
-
     mainContainer.appendChild(ul)
 
     return mainContainer
@@ -76,8 +76,9 @@ container.appendChild(createFooter())
 // Load main page content upon page load
 content.appendChild(createHomeContent())
 
-navOptions.forEach(option => {
-    document.getElementById(`${option}`).addEventListener("click", printMenu)
+document.getElementById("Menu").addEventListener("click", createMenuContent)
+document.getElementById("Home").addEventListener("click", function () {
+    content.appendChild(createHomeContent())
 })
 
 
