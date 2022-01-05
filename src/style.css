@@ -14,6 +14,10 @@ body {
     font-family: "Spartan";
     color: white;
     font-size: large;
+    background: url("./barPhoto.jpg") no-repeat center;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: black;
 }
 
 header {
@@ -25,6 +29,7 @@ header {
     background-color: black;
     opacity: .8;
     color: white;
+    text-align: center;
 }
 
 footer {
@@ -37,6 +42,11 @@ footer {
 }
 h4 {
     margin-bottom: 5px;
+}
+
+h6 {
+    margin-bottom: 0;
+    font-size: large;
 }
 
 nav {
@@ -68,9 +78,8 @@ ul {
 .container {
     display: flex;
     flex-direction: column;
+    flex: 1;
     height: 100%;
-    background: url("./barPhoto.jpg") no-repeat center fixed;
-    background-size: cover;
 }
 
 .content {
@@ -89,6 +98,29 @@ ul {
     max-width: 400px;
     align-items: center;
     justify-content: center;
+}
+
+.menuContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 700px;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    background: rgba(0, 0, 0, 0.7);
+    gap: 40px;
+    padding: 30px;
+    margin: 10px;
+}
+
+.menuItem {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .navItem {
