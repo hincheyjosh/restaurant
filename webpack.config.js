@@ -5,11 +5,11 @@ module.exports = {
     watchOptions: {
         poll: 1000,
     },
-    mode: "development",
+    mode: "production",
     entry: {
         index: './src/index.js',
     },
-    devtool: 'inline-source-map',
+    devtool: 'source-map',
     devServer: {
         static: './dist',
       },
@@ -22,7 +22,7 @@ module.exports = {
         filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist'),
         clean: true,
-        publicPath: '/',
+        publicPath: '/restaurant/',
     },
     module: {
         rules: [
