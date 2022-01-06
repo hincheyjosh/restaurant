@@ -1,6 +1,7 @@
 import './style.css'
 import chefPhoto from "./chefPhoto.jpg"
 import createMenuContent from "./menuPage.js"
+import createContactContent from './contactPage.js'
 
 const navOptions = ["Home", "Menu", "Contact"]
 
@@ -80,5 +81,7 @@ document.getElementById("Menu").addEventListener("click", createMenuContent)
 document.getElementById("Home").addEventListener("click", function () {
     content.appendChild(createHomeContent())
 })
-
+document.getElementById("Contact").addEventListener("click", function () {
+    content.appendChild(createContactContent())
+})
 
