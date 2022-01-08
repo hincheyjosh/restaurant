@@ -1,5 +1,5 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
     watchOptions: {
@@ -7,37 +7,37 @@ module.exports = {
     },
     mode: "production",
     entry: {
-        index: './src/index.js',
+        index: "./src/index.js",
     },
-    devtool: 'source-map',
+    devtool: "source-map",
     devServer: {
-        static: './dist',
-      },
+        static: "./dist",
+    },
     plugins: [
         new HtmlWebpackPlugin({
-        title: "Joshua's Bar and Grill",
+            title: "Joshua's Bar and Grill",
         }),
     ],
     output: {
-        filename: '[name].bundle.js',
-        path: path.resolve(__dirname, 'dist'),
+        filename: "[name].bundle.js",
+        path: path.resolve(__dirname, "dist"),
         clean: true,
-        publicPath: '/restaurant/',
+        publicPath: "/restaurant/",
     },
     module: {
         rules: [
-        {
-            test: /\.css$/i,
-            use: ['style-loader', 'css-loader'],
-        },
-        {
-            test: /\.(png|svg|jpg|jpeg|gif)$/i,
-            type: 'asset/resource',
-        },
-        {
-            test: /\.(woff|woff2|eot|ttf|otf)$/i,
-            type: 'asset/resource'
-        },
-    ],
+            {
+                test: /\.css$/i,
+                use: ["style-loader", "css-loader"],
+            },
+            {
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: "asset/resource",
+            },
+            {
+                test: /\.(woff|woff2|eot|ttf|otf)$/i,
+                type: "asset/resource",
+            },
+        ],
     },
 };
